@@ -28,5 +28,5 @@ CACHE_FILE="cache/$(basename $MODEL_OUT_NAME)"
 rm -f $CACHE_FILE #These need to be deleted (experience)
 CMD="vw --cache_file $CACHE_FILE --passes 15 -b 26 --progress 1000 --initial_t 1.0 --save_resume --save_per_pass"
 
-cat | $CMD -f $MODEL_OUT_NAME $* > log/single_train.log 2>&1
+cat | $CMD -f $MODEL_OUT_NAME $* #> log/single_train.log 2>&1
 
